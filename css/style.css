@@ -47,6 +47,7 @@ body {
 
 :root {
   --white: #FFF;
+  --black: #151515;
 }
 
 /* ================================ */
@@ -63,6 +64,10 @@ body {
 
 .header-main {
   background-color: transparent;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 }
 
 .container {
@@ -79,17 +84,12 @@ body {
   align-items: flex-end;
 }
 
-.logo {}
-
-.menu {}
 
 .menu__list {
   display: flex;
   gap: 35px;
 
 }
-
-.menu__list-item {}
 
 .menu__list-link {
   color: var(--white, #FFF);
@@ -98,8 +98,74 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* ==================main===== */
 .main {
   flex-grow: 1;
+}
+
+/* ==================== */
+.top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  color: var(--white, #FFF);
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 9.6rem;
+  font-weight: 700;
+
+}
+
+.top__link {
+  background-color: var(--black);
+  padding: 23px;
+  max-width: 430px;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+/* =============slider=========== */
+.swiper-wrapper {
+  background: rgba(21, 21, 21, .6);
+}
+
+.swiper-slide {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 3px;
+  background-color: #151515;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 120px;
+  height: 6px;
+  background-color: #FFF;
+  border-radius: 0;
+  opacity: 1;
+}
+
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 50px;
 }
 
 /* =======================footer============= */
